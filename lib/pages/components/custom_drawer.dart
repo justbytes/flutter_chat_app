@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_app/services/auth/auth_service.dart';
 import 'package:flutter_chat_app/pages/HomePage.dart';
-import 'package:flutter_chat_app/pages/SettingsPage.dart';
+import 'package:flutter_chat_app/pages/setting_page.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
 
   void logout() {
-    final _auth = AuthService();
-    _auth.signOut();
+    final auth = AuthService();
+    auth.signOut();
   }
 
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.secondary,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
